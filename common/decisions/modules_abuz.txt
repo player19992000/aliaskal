@@ -1,0 +1,1549 @@
+Modules_sharing_category = {
+	
+	Module_vint = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль амфибии" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		 fire_only_once = yes
+		allowed = {
+		}
+
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {			
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = amphibious_drive
+
+				}
+			
+					NOT = { has_tech = amphibious_drive_module } # Не показывать, если технология уже есть
+	
+				
+
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { amphibious_drive_module = 1 }
+		}
+	}
+		Module_vint_GER = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль амфибии" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		 fire_only_once = yes
+		allowed = {
+		}
+
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {			
+		# Проверка, что страна - это Германия
+		original_tag = GER
+
+		GER = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				JAP = { has_tech = amphibious_drive }
+				FIN = { has_tech = amphibious_drive }
+			}
+			AND = {
+				NOT = { has_tech = amphibious_drive_module }
+			}
+		}
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { amphibious_drive_module = 1 }
+		}
+	}
+		Module_vint_FIN = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль амфибии" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		 fire_only_once = yes
+		allowed = {
+		}
+
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {	
+					original_tag = FIN		
+				FIN = { 
+					OR = { 
+						JAP = { has_tech = amphibious_drive }
+						GER = { has_tech = amphibious_drive }
+					}
+					AND = {
+						NOT = { has_tech = amphibious_drive_module } # Не показывать, если технология уже есть
+					}
+				}
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { amphibious_drive_module = 1 }
+		}
+	}
+		Module_vint_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль амфибии" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		 fire_only_once = yes
+		allowed = {
+		}
+
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {		
+					original_tag = JAP	
+				JAP = { 
+					OR = { 
+						FIN = { has_tech = amphibious_drive }
+						GER = { has_tech = amphibious_drive }
+						ITA = { has_tech = amphibious_drive }
+					}
+					AND = {
+						NOT = { has_tech = amphibious_drive_module } # Не показывать, если технология уже есть
+					}
+				}
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { amphibious_drive_module = 1 }
+		}
+	}			
+		Module_vint_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль амфибии" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		 fire_only_once = yes
+		allowed = {
+		}
+
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {		
+					original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = amphibious_drive }
+						CAN = { has_tech = amphibious_drive }
+						SAF = { has_tech = amphibious_drive }
+						FRA = { has_tech = amphibious_drive }
+						NZL = { has_tech = amphibious_drive }
+						RAJ = { has_tech = amphibious_drive }
+						AST = { has_tech = amphibious_drive }
+					}
+					AND = {
+						NOT = { has_tech = amphibious_drive_module } # Не показывать, если технология уже есть
+					}
+				}
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { amphibious_drive_module = 1 }
+		}
+	}				
+		Module_ez_maint = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль облегченного обслуживания" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no	
+		}
+
+		visible = {
+			
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = tech_maintenance_company2
+				}
+				NOT = { has_tech = easy_maintenance_module } # Не показывать, если технология уже есть
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { easy_maintenance_module = 1 }
+		}
+	}
+		Module_ez_maint_GER = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль облегченного обслуживания" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no	
+		}
+
+		visible = {
+					original_tag = GER
+
+		GER = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				JAP = { has_tech = tech_maintenance_company2 }
+				FIN = { has_tech = tech_maintenance_company2 }
+			}
+			AND = {
+				NOT = { has_tech = easy_maintenance_module }
+			}
+		}
+	
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { easy_maintenance_module = 1 }
+		}
+	}	
+			Module_ez_maint_FIN = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль облегченного обслуживания" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no	
+		}
+
+		visible = {
+					original_tag = FIN
+
+		FIN = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				JAP = { has_tech = tech_maintenance_company2 }
+				GER = { has_tech = tech_maintenance_company2 }
+			}
+			AND = {
+				NOT = { has_tech = easy_maintenance_module }
+			}
+		}
+	
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { easy_maintenance_module = 1 }
+		}
+	}	
+				Module_ez_maint_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль облегченного обслуживания" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no	
+		}
+
+		visible = {
+					original_tag = JAP
+
+		JAP = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				FIN = { has_tech = tech_maintenance_company2 }
+				GER = { has_tech = tech_maintenance_company2 }
+			}
+			AND = {
+				NOT = { has_tech = easy_maintenance_module }
+			}
+		}
+	
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { easy_maintenance_module = 1 }
+		}
+	}
+				Module_ez_maint_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль облегченного обслуживания" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no	
+		}
+
+		visible = {
+								original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = tech_maintenance_company2 }
+						CAN = { has_tech = tech_maintenance_company2 }
+						SAF = { has_tech = tech_maintenance_company2 }
+						FRA = { has_tech = tech_maintenance_company2 }
+						NZL = { has_tech = tech_maintenance_company2 }
+						RAJ = { has_tech = tech_maintenance_company2 }
+						AST = { has_tech = tech_maintenance_company2 }
+					}
+					AND = {
+						NOT = { has_tech = easy_maintenance_module } # Не показывать, если технология уже есть
+					}
+				}		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { easy_maintenance_module = 1 }
+		}
+	}			
+		Module_heavy_cannon_2 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль тяжелого орудия 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+	available = {
+    is_ai = no
+	}
+
+	visible = {
+
+		      any_country = {
+        is_in_faction_with = ROOT
+        has_tech = antitank2
+    }
+    		NOT = { has_tech = heavy_cannon_2_module } # Не показывать, если технология уже есть
+					
+	}
+
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { heavy_cannon_2_module = 1 }
+		}
+	}	
+			Module_heavy_cannon_2_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль тяжелого орудия 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+	available = {
+    is_ai = no
+	}
+
+	visible = {
+								original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = antitank2 }
+						CAN = { has_tech = antitank2 }
+						SAF = { has_tech = antitank2 }
+						FRA = { has_tech = antitank2 }
+						NZL = { has_tech = antitank2 }
+						RAJ = { has_tech = antitank2 }
+						AST = { has_tech = antitank2 }
+					}
+					AND = {
+						NOT = { has_tech = heavy_cannon_2_module } # Не показывать, если технология уже есть
+					}
+				}	
+	
+	}
+
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { heavy_cannon_2_module = 1 }
+		}
+	}	
+		Module_heavy_cannon_2_GER = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль тяжелого орудия 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+	available = {
+    is_ai = no
+	}
+
+	visible = {
+	# Проверка, что страна - это Германия
+		original_tag = GER
+
+		GER = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				JAP = { has_tech = antitank2 }
+				FIN = { has_tech = antitank2 }
+			}
+			AND = {
+				NOT = { has_tech = heavy_cannon_2_module }
+			}
+		}
+			
+	}
+
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { heavy_cannon_2_module = 1 }
+		}
+	}	
+	Module_heavy_cannon_2_FIN = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированный модуль тяжелого орудия 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+	available = {
+    is_ai = no
+	}
+
+	visible = {
+	# Проверка, что страна - это Германия
+		original_tag = FIN
+
+		FIN = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				JAP = { has_tech = antitank2 }
+				GER = { has_tech = antitank2 }
+			}
+			AND = {
+				NOT = { has_tech = heavy_cannon_2_module }
+			}
+		}
+			
+	}
+
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { heavy_cannon_2_module = 1 }
+		}
+	}		
+	Module_heavy_cannon_2_JAP = { 
+		priority = 50
+		name = "Лицензированный модуль тяжелого орудия 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+	available = {
+    is_ai = no
+	}
+
+	visible = {
+	# Проверка, что страна - это Германия
+		original_tag = JAP
+
+		JAP = {
+			
+			OR = { 
+				FIN = { has_tech = antitank2 }
+				GER = { has_tech = antitank2 }
+				ROM = { has_tech = antitank2 }
+			}
+			AND = {
+				NOT = { has_tech = heavy_cannon_2_module }
+			}
+		}
+			
+	}
+
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { heavy_cannon_2_module = 1 }
+		}
+	}		
+		Module_cannon_2 = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+			is_ai = no		
+		}
+
+		visible = {
+		
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = antitank4
+				}
+				NOT = { has_tech = high_velocity_cannon_2_module }
+		
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}
+			Module_cannon_2_JAP = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+			is_ai = no		
+		}
+		visible = {
+			original_tag = JAP
+
+		JAP = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				FIN = { has_tech = antitank4 }
+				GER = { has_tech = antitank4 }
+								ROM = { has_tech = antitank4 }
+								ITA = { has_completed_focus = ITA_self_propelled_guns }
+			}
+			AND = {
+				NOT = { has_tech = high_velocity_cannon_2_module }
+			}
+		}
+		}
+		
+		
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}
+
+			Module_cannon_2_HUN = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+			is_ai = no		
+		}
+		visible = {
+			original_tag = HUN
+
+		HUN = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				FIN = { has_tech = antitank4 }
+				GER = { has_tech = antitank4 }
+								ROM = { has_tech = antitank4 }
+								ITA = { has_completed_focus = ITA_self_propelled_guns }
+			}
+			AND = {
+				NOT = { has_tech = high_velocity_cannon_2_module }
+			}
+		}
+		}
+		
+		
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}
+				Module_cannon_2_GER = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+			is_ai = no		
+		}
+		visible = {
+			original_tag = GER
+
+		GER = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				FIN = { has_tech = antitank4 }
+				JAP = { has_tech = antitank4 }
+				ITA = { has_completed_focus = ITA_self_propelled_guns }
+			}
+			AND = {
+				NOT = { has_tech = high_velocity_cannon_2_module }
+			}
+		}
+		}
+		
+		
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}
+			Module_cannon_2_FIN = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+			is_ai = no		
+		}
+		visible = {
+			original_tag = FIN
+
+		FIN = {
+			# Условия для Германии: наличие технологии amphibious_drive у Японии или Финляндии, 
+			# и отсутствие технологии amphibious_drive_module у Германии
+			OR = { 
+				GER = { has_tech = antitank4 }
+				JAP = { has_tech = antitank4 }
+				ITA = { has_completed_focus = ITA_self_propelled_guns }
+			}
+			AND = {
+				NOT = { has_tech = high_velocity_cannon_2_module }
+			}
+		}
+		}
+		
+		
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}	
+				Module_cannon_2_SOV = { 
+		priority = 50
+		name = "Лицензированный модуль орудия 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+			is_ai = no		
+		}
+		visible = {
+											original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = antitank4 }
+						CAN = { has_tech = antitank4 }
+						SAF = { has_tech = antitank4 }
+						FRA = { has_tech = antitank4 }
+						NZL = { has_tech = antitank4 }
+						RAJ = { has_tech = antitank4 }
+						AST = { has_tech = antitank4 }
+					}
+					AND = {
+						NOT = { has_tech = high_velocity_cannon_2_module } # Не показывать, если технология уже есть
+					}
+				}	
+	
+		}
+		
+		
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { high_velocity_cannon_2_module = 1 }
+		}
+	}	
+	Module_cannon_3 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули орудий 43г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes	
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = antitank5
+				}
+			NOT = { has_tech = cannon_3_module }
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { cannon_3_module = 1 }
+		}
+	}
+		Module_cannon_3_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули орудий 43г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes	
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+								original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = antitank5 }
+						CAN = { has_tech = antitank5 }
+						SAF = { has_tech = antitank5 }
+						FRA = { has_tech = antitank5 }
+						NZL = { has_tech = antitank5 }
+						RAJ = { has_tech = antitank5 }
+						AST = { has_tech = antitank5 }
+					}
+					AND = {
+						NOT = { has_tech = cannon_3_module } # Не показывать, если технология уже есть
+					}
+				}	
+		
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { cannon_3_module = 1 }
+		}
+	}
+			Module_cannon_3_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули орудий 43г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes	
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+								original_tag = JAP		
+				JAP = { 
+					OR = { 
+						GER = { has_tech = antitank5 }
+						ITA = { has_tech = antitank5 }
+						ROM = { has_tech = antitank5 }
+						HUN = { has_tech = antitank5 }
+						BUL = { has_tech = antitank5 }
+						FIN = { has_tech = antitank5 }
+					}
+					AND = {
+						NOT = { has_tech = cannon_3_module } # Не показывать, если технология уже есть
+					}
+				}	
+		
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { cannon_3_module = 1 }
+		}
+	}
+			Module_engine_3_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули авиадвигателей 43г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes	
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+								original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = engines_3 }
+						CAN = { has_tech = engines_3 }
+						SAF = { has_tech = engines_3 }
+						FRA = { has_tech = engines_3 }
+						NZL = { has_tech = engines_3 }
+						RAJ = { has_tech = engines_3 }
+						AST = { has_tech = engines_3 }
+					}
+					AND = {
+						NOT = { has_tech = air_engines_3_modules } # Не показывать, если технология уже есть
+					}
+				}	
+		
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { air_engines_3_modules = 1 }
+		}
+	}
+	Module_air_engine_3 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули авиадвигателей 40г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+		is_ai = no		
+		}
+
+		visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = engines_3
+				}
+			NOT = { has_tech = air_engines_3_modules }
+		
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { air_engines_3_modules = 1 }
+		}
+	}
+			Module_engine_4_SOV = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули авиадвигателей 43г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes	
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+								original_tag = SOV		
+				SOV = { 
+					OR = { 
+						ENG = { has_tech = engines_4 }
+						CAN = { has_tech = engines_4 }
+						SAF = { has_tech = engines_4 }
+						FRA = { has_tech = engines_4 }
+						NZL = { has_tech = engines_4 }
+						RAJ = { has_tech = engines_4 }
+						AST = { has_tech = engines_4 }
+					}
+					AND = {
+						NOT = { has_tech = engines_4_modules } # Не показывать, если технология уже есть
+					}
+				}	
+		
+		
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { engines_4_modules = 1 }
+		}
+	}
+	Module_air_engine_4 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули авиадвигателей 44г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = engines_4
+				}
+			NOT = { has_tech = engines_4_modules }
+		
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { engines_4_modules = 1 }
+		}
+	}
+	Module_navy_radar_3 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = phased_array
+				}
+			
+		NOT = { has_tech = navy_radar_3 }
+
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_3 = 1 }
+		}
+	}	
+		Module_navy_radar_3_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+											original_tag = JAP		
+				JAP = { 
+					OR = { 
+						ITA = { has_tech = phased_array }
+						GER = { has_tech = phased_array }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_radar_3 } # Не показывать, если технология уже есть
+					}
+				}	
+			
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_3 = 1 }
+		}
+	}	
+	
+			Module_navy_radar_3_ITA = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+											original_tag = ITA		
+				ITA = { 
+					OR = { 
+						JAP = { has_tech = phased_array }
+						GER = { has_tech = phased_array }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_radar_3 } # Не показывать, если технология уже есть
+					}
+				}	
+			
+		}
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_3 = 1 }
+		}
+	}	
+	Module_navy_radar_4 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = monopulse_radar
+				}
+			
+		NOT = { has_tech = navy_radar_4 }
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_4 = 1 }
+		}
+	}			
+	Module_navy_radar_4_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+										original_tag = JAP		
+				JAP = { 
+					OR = { 
+						ITA = { has_tech = monopulse_radar }
+						GER = { has_tech = monopulse_radar }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_radar_4 } # Не показывать, если технология уже есть
+					}
+				}	
+				
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_4 = 1 }
+		}
+	}				
+	Module_navy_radar_4_ITA = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного радара 42г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+		is_ai = no		
+		}
+
+		visible = {
+										original_tag = ITA		
+				ITA = { 
+					OR = { 
+						JAP = { has_tech = monopulse_radar }
+						GER = { has_tech = monopulse_radar }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_radar_4 } # Не показывать, если технология уже есть
+					}
+				}	
+				
+		}
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_radar_4 = 1 }
+		}
+	}					
+Module_navy_fire_control_2 = { 
+	priority = 50
+	name = "Лицензированные модули корабельного СУО 39г" 
+	icon = generic_political_actions
+	fire_only_once = yes
+	allowed = {
+	}
+	days_remove = 15
+
+	modifier = {
+		civilian_factory_use = 1
+	}
+	available = {
+		is_ai = no		
+	}
+
+	visible = {
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = improved_fire_control_system
+				}
+			
+		NOT = { has_tech = navy_fire_control_2 }
+	}
+
+	cost = 0
+	
+	complete_effect = {
+		set_technology = { navy_fire_control_2 = 1 }
+	}
+}
+Module_navy_fire_control_2_JAP = { 
+	priority = 50
+	name = "Лицензированные модули корабельного СУО 39г" 
+	icon = generic_political_actions
+	fire_only_once = yes
+	allowed = {
+	}
+	days_remove = 15
+
+	modifier = {
+		civilian_factory_use = 1
+	}
+	available = {
+		is_ai = no		
+	}
+
+	visible = {
+											original_tag = JAP		
+				JAP = { 
+					OR = { 
+						ITA = { has_tech = improved_fire_control_system }
+						GER = { has_tech = improved_fire_control_system }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_fire_control_2 } # Не показывать, если технология уже есть
+					}
+				}	
+				
+	}
+
+	cost = 0
+	
+	complete_effect = {
+		set_technology = { navy_fire_control_2 = 1 }
+	}
+}
+Module_navy_fire_control_2_ITA = { 
+	priority = 50
+	name = "Лицензированные модули корабельного СУО 39г" 
+	icon = generic_political_actions
+	fire_only_once = yes
+	allowed = {
+	}
+	days_remove = 15
+
+	modifier = {
+		civilian_factory_use = 1
+	}
+	available = {
+		is_ai = no		
+	}
+
+	visible = {
+											original_tag = ITA		
+				ITA = { 
+					OR = { 
+						JAP = { has_tech = improved_fire_control_system }
+						GER = { has_tech = improved_fire_control_system }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_fire_control_2 } # Не показывать, если технология уже есть
+					}
+				}	
+				
+	}
+
+	cost = 0
+	
+	complete_effect = {
+		set_technology = { navy_fire_control_2 = 1 }
+	}
+}
+	Module_navy_fire_control_3 = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного СУО 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+	    is_ai = no	
+		}
+
+		visible = {		
+	
+				any_country = {
+					is_in_faction_with = ROOT
+					has_tech = advanced_fire_control_system
+				}
+				NOT = { has_tech = navy_fire_control_3 }
+			}
+		
+		
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_fire_control_3 = 1 }
+		}
+	}	
+		Module_navy_fire_control_3_ITA = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного СУО 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+	    is_ai = no	
+		}
+
+		visible = {		
+									original_tag = ITA		
+				ITA = { 
+					OR = { 
+						JAP = { has_tech = advanced_fire_control_system }
+						GER = { has_tech = advanced_fire_control_system }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_fire_control_3 } # Не показывать, если технология уже есть
+					}
+				}	
+			
+		}
+		
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_fire_control_3 = 1 }
+		}
+	}	
+		Module_navy_fire_control_3_JAP = { #This is a duplicate of the decision present in the Paranoia category
+		priority = 50
+		name = "Лицензированные модули корабельного СУО 41г" # Угу, точно не абьюз, угу, педики
+		icon = generic_political_actions
+		fire_only_once = yes
+
+		allowed = {
+		}
+		days_remove = 15
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		available = {
+
+	    is_ai = no	
+		}
+
+		visible = {		
+									original_tag = JAP		
+				JAP = { 
+					OR = { 
+						ITA = { has_tech = advanced_fire_control_system }
+						GER = { has_tech = advanced_fire_control_system }
+			
+					}
+					AND = {
+						NOT = { has_tech = navy_fire_control_3 } # Не показывать, если технология уже есть
+					}
+				}
+		}
+		
+		
+
+		cost = 0
+		
+		complete_effect = {
+			set_technology = { navy_fire_control_3 = 1 }
+		}
+		
+		
+		
+	}
+}

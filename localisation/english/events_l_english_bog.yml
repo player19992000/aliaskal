@@ -1,0 +1,76 @@
+﻿ l_english:
+ #Iran Allies
+ iran_front.0.a:0 "Iran's entry into the Allies"
+ iran_front.1.a:0 "Iran joins Allies against Axis aggression. Troops and aircraft deployed with India's permission. Allies unite to reclaim Egypt and Iraq. Momentous campaign underway to restore stability."
+ iran_front.1.b:0 "Iran aligns with Allies against Axis aggression. United front formed to repel common threat. Allies and Iran stand determined to confront and defend against Axis forces."
+ iran_front.1.c:0 "We shall defeat them!"
+ iran_front.1.d:0 "Another escalation"
+ #Iran Axis
+ iran_front.2.a:0 ""
+ iran_front.2.b:0 "Axis powers resent Iran's neutrality and its vital oil fields. They seek to crush Iran for dominance, disregarding consequences and aiming to overcome India and other obstacles in their path to victory."
+ iran_front.2.c:0 "Frustrated by Iran's prolonged neutrality, the Axis powers see their oil fields as essential in the war against the Allies. With a determination to establish a land border with their Japanese allies, the Axis resolves to destroy India, regardless of the cost involved. Their unwavering commitment drives them to take drastic measures to achieve their objectives, sparing no expense or effort in their pursuit of victory."
+ iran_front.2.d:0 "The will regret this."
+ iran_front.2.e:0 "We will crush them."
+
+ #Fin request event
+  fin_german.1.a:0 "Finland Demands Control Over Denmark"  
+  fin_german.1.b:0 "Driven by their vision of a united Nordic realm, Finland has formally requested Denmark be placed under their administration. They argue that only a strong, unified North can ensure lasting stability in the region."  
+  fin_german.1.c:0 "A powerful ally in the North will only strengthen Germany’s position."  
+  fin_german.1.d:0 "Absolutely not! Denmark remains under our control."  
+
+  fin_german.2.a:0 "Finland Demands Control Over Norway"  
+  fin_german.2.b:0 "As part of their ambition to forge a united Nordic empire, Finland has approached us with a bold request—control over Norway. They claim that under their leadership, the North will be better defended against external threats."  
+  fin_german.2.c:0 "A unified Nordic front will make Germany stronger in the long run."  
+  fin_german.2.d:0 "Out of the question! Norway remains under German control."  
+
+
+
+ #China capitulation event
+ bogChina.1.a:0 "Victory in China!"
+ bogChina.1.b:0 "Our forces have emerged victorious against China! With the dust settling, pivotal decisions now await us. As we deliberate on the forthcoming steps. \n\nWe have already decided to assume control of the coastal states, extracting war reparations in the form of their resources and industrial assets (soon tm). \n\nHowever, we must now determine the fate of mainland China. Shall we proceed with integration, establish a puppet government, or transfer control to Manchukuo?"
+ bogChina.1.c:0 "We shall assume control of China"
+ bogChina.1.d:0 "Puyi may control inland but we must retain the coastline"
+ bogChina.1.e:0 "Puyi can handle this"
+ bogChina.1.f:0 "Puyi can have dominion over the northern Warlords"
+ bogChina.2.a:0 "The matter of tribute"
+ bogChina.2.b:0 "As our war effort intensifies, securing additional resources is paramount. The question arises: should we formally levy tribute from Puyi. We must assess whether our current economic policies are sufficient or if tribute is necessary to sustain operations."
+ bogChina.2.c:0 "We don't need poor Chinese steel"
+ bogChina.2.d:0 "They owe us as much"
+ bogChina.2.e:0 "We shall be leniant to our clients sta... ahem I mean valuable ally"
+ bogChina.3.c:0 "no more tax"
+ bogChina.3.d:0 "idk waht to put"
+ bogChina.3.e:0 "gagsjgoag"
+ MAN_Tax_tt: "§YWe will tax them for 1 year§!"
+ #Brazil joining the Allies
+ join_allies.2.a:0 "Brazil's Entry into the Allies!"
+ join_allies.2.b:0 "The United Kingdom has officially announced Brazil's entry into the Allies, marking a significant development in the global conflict. Brazil, driven by the relentless acts of aggression committed by the Axis nations, has chosen to align itself with the Allies. With a resolute spirit, the Brazilians have pledged to contribute their efforts to the cause, vowing to liberate Europe from the clutches of the Evil Axis. This new alliance adds strength and determination to the Allied forces, reshaping the dynamics of the war and setting the stage for a renewed and united front against the Axis powers."
+ join_allies.3.a:0 "Ireland's Entry into the Allies!"
+ join_allies.3.b:0 "The United Kingdom has officially announced Ireland's unexpected entry into the Allies, signifying a remarkable shift in the global conflict. Driven by mounting concerns over the Axis powers' destabilizing ambitions and the fall of neighboring nations, Ireland has chosen to align itself with the Allies. Determined to protect its sovereignty and defend against potential threats, the Irish government now stands alongside like-minded nations in the fight against tyranny and oppression. With Ireland's strategic location, industrial capacity, and skilled workforce, the new alliance adds vital strength to the Allied forces, reshaping the dynamics of the war and forging a renewed and united front against the Axis powers."
+ join_allies.2.c:0 "Interesting"
+ join_allies.2.d:0 "They will regret that"
+
+ #Siam
+ siam.0.a:0 "Inviting Siam to the faction"
+ siam.0.b:0 "Siam, displaying a strong willingness to join our faction, becomes an alluring prospect due to their sympathetic stance towards our cause and strategically advantageous location. Additionally, given their expressed enthusiasm, we could contemplate granting Siam a portion of the recently acquired Vichy territories in Indochina, reinforcing their commitment to our cause within the Greater East Asia Co-Prosperity Sphere."
+ siam.0.c:0 "We will keep our lands to ourselves."
+ siam.0.d:0 "We shall give them Laos and Cambodia, welcome to the faction!"
+ siam.0.e:0 "We want our new allies to be strong, give them everything."
+
+ siam.1.a:0 "Joining the Greater East Asia Co-Prosperity Sphere"
+ siam.1.b:0 "With Japan granting us control over Laos and Cambodia, their gesture has cemented our loyalty. By joining their faction, the Greater East Asia Co-Prosperity Sphere, we unequivocally demonstrate our unwavering commitment to their cause. Our strategic location and shared sympathies make us a valuable asset within their alliance."
+ siam.1.c:0 "Wonderful!"
+
+ siam.2.a:0 "Joining the Greater East Asia Co-Prosperity Sphere"
+ siam.2.b:0 "We see this invitation to join the Greater East Asia Co-Prosperity Sphere as a promising avenue for potential territorial gains. Aligning ourselves with Japan and their faction holds the prospect of expanding our influence and securing strategic advantages."
+ siam.2.c:0 "With the help of Japan we will be able to expand."
+
+ siam.3.a:0 "Joining the Greater East Asia Co-Prosperity Sphere"
+ siam.3.b:0 "With Japan granting us control over Indochina, their gesture has secured our loyalty. In joining their faction, the Greater East Asia Co-Prosperity Sphere, we affirm our unwavering commitment to their cause. Our strategic location and shared sympathies make us a valuable addition to their alliance."
+ siam.3.c:0 "We shall prove to be good allies."
+ 
+#Other
+ boggeneric.14.a:0 "§RWARNING, WILL RECALL THE ATTACHE!§"
+ boggeneric.14.b:0 "Keep Attache!"
+ wtt_japan.1000.t: "Bose Offers Support for the Burma Campaign"
+ wtt_japan.1000.desc: "Subhas Chandra Bose, leader of the Indian National Army, has approached us with an offer, his forces stand ready to aid our advance into [BRM.GetName]. He envisions this as the first step toward liberating India from [ENG.GetAdjective] rule, and he believes that by striking at Burma we can weaken the British Raj. His men are hardened nationalists, and their knowledge of the terrain could prove invaluable. Do we accept?"
+ wtt_japan.1000.a: "Of course"

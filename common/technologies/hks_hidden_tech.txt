@@ -1,0 +1,68 @@
+technologies = {
+
+	amphibious_drive_module = {
+		enable_equipment_modules = {
+			amphibious_drive
+		}
+	}
+		heavy_cannon_2_module = {
+		enable_equipment_modules = {
+			tank_heavy_cannon_2
+		}
+	}	
+		high_velocity_cannon_2_module = {
+		enable_equipment_modules = {
+			tank_high_velocity_cannon_2
+		}
+	}
+		cannon_3_module = {
+		enable_equipment_modules = {
+			tank_high_velocity_cannon_3
+			tank_heavy_cannon_3
+			auto_loader
+		}
+	}
+		easy_maintenance_module = {
+			enable_equipment_modules = {
+				easy_maintenance
+			}
+	}
+		air_engines_3_modules = {
+			enable_equipment_modules = {
+			engine_3_1x
+			engine_3_2x
+			engine_3_3x
+			engine_3_4x
+			engine_3_6x	
+			}
+	}	
+		engines_4_modules = {
+			enable_equipment_modules = {
+			engine_4_1x
+			engine_4_2x
+			engine_4_3x
+			engine_4_4x
+			engine_4_6x	
+			}
+	}	
+		navy_radar_3 = {
+			enable_equipment_modules = {
+				ship_radar_3
+			}
+	}
+		navy_radar_4 = {
+			enable_equipment_modules = {
+				ship_radar_4
+			}
+	}	
+		navy_fire_control_2 = {
+			enable_equipment_modules = {
+				ship_fire_control_system_2
+			}
+	}
+		navy_fire_control_3 = {
+			enable_equipment_modules = {
+				ship_fire_control_system_3
+			}
+	}						
+}

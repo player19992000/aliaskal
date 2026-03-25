@@ -1,0 +1,156 @@
+on_actions = {
+	#AI Cap
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = bog_limit_AI_units
+						option = bog_limit_AI_units_YES
+					}
+					is_ai = yes
+				}
+				ROOT = {
+					add_ideas = AI_sacked_army
+					country_lock_all_division_template = yes 
+					delete_unit = {}
+				}
+			}
+		}
+	}
+
+	#ETH capitulate event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = ETH
+					NOT = {
+						has_global_flag = ETH_capitulated
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BOG_PEACE_SCRIPTS
+							option = BOG_PEACE_SCRIPTS_OFF
+						}
+					}
+				}
+				eth_capitulation_peace_deal = yes
+			}
+		}
+	}
+
+	#YUG capitulate event
+	
+
+	#GRE capitulate event
+	
+
+	#CHI capitulation event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					TAG = CHI
+						
+					NOT = {
+						has_global_flag = CHI_capitulated
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BOG_PEACE_SCRIPTS
+							option = BOG_PEACE_SCRIPTS_OFF
+						}
+					}
+				}
+				JAP = { add_threat = 20 }
+				chi_capitulation_peace_deal = yes				
+			}
+		}
+	}
+	
+	#SPR capitulation event
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					TAG = SPR
+						
+					NOT = {
+						or = {
+							has_global_flag = scw_over
+
+							has_global_flag = SPR_capitulated
+						}
+						
+					}
+					NOT = {
+						has_game_rule = {
+							rule = bog_SPCW_revival
+							option = bog_SPCW_revival_NO
+						}
+					}
+				}
+
+				SPR_revival = yes				
+			}
+		}
+	}
+
+	#JAP capitulation event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = BOG_PEACE_SCRIPTS
+							option = BOG_PEACE_SCRIPTS_OFF
+						}
+					}
+				}
+				if = {
+					limit = { tag = JAP }
+					set_global_flag = JAP_capitulated				
+					jap_capitulation_peace_deal = yes
+				}
+			}
+		}
+	}
+
+	#Axis Capitulation event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				set_global_flag = GER_capitulated                
+				
+				axis_capitulation_peace_deal = yes				
+			}
+		}
+	}
+
+	#Comintern capitulate event
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					tag = SOV
+
+					NOT = {
+						has_global_flag = SOV_capitulated
+					}
+					NOT = {
+						has_game_rule = {
+							rule = BOG_PEACE_SCRIPTS
+							option = BOG_PEACE_SCRIPTS_OFF
+						}
+					}
+				}
+				comintern_capitulation_peace_deal = yes
+			}
+		}
+	}
+}
